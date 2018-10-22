@@ -1,4 +1,3 @@
-// Top types of responses that are disputed.
 MATCH (r:Response)-[:TO {disputed:true}]->(:Complaint)
 RETURN r.name AS response, COUNT(*) AS count
 ORDER BY count DESC;
